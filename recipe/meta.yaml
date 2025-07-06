@@ -1,5 +1,5 @@
 {% set name = "mattersim" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mattersim-{{ version }}.tar.gz
-  sha256: 54a62343525c8a69ee953e765bab9b8733d6192f4dbfeca9f44cd5742c195304
+  sha256: bd345cd1805927f29e2d1af0b2bf75e88bcf71d6f092e07eb6b95889c8e4b0f0
 
 build:
   skip: true  # [py<39 or not linux]
