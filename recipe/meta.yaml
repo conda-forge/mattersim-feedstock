@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<310 or not linux]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - cython >=0.29.32
-    - numpy <2
+    - numpy >=2
     - pip
     - python
     - setuptools >=45
