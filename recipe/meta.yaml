@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py<310 or not linux]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib('c') }}
   host:
     - cython >=0.29.32
-    - numpy <2
+    - numpy >=2
     - pip
     - python
     - setuptools >=45
@@ -28,26 +28,29 @@ requirements:
     - wheel
   run:
     - ase >=3.23.0
-    - azure-storage-blob
     - azure-identity
+    - azure-storage-blob
     - deprecated
-    - e3nn ==0.5.0
-    - emmet-core <0.84
+    - e3nn >=0.5.0
+    - emmet-core >=0.84
     - loguru
     - mp-api
     - {{ pin_compatible('numpy') }}
     - opt_einsum_fx
-    - pydantic ==2.9.2
+    - phonopy
+    - pydantic >=2.9.2
     - pymatgen
     - python
-    - pytorch =>2.2.0
-    - pytorch_geometric ==2.5.3
+    - pytorch >=2.2.0
+    - pytorch_geometric >=2.5.3
     - seekpath
-    - torchvision =>0.17.0
-    - torchaudio =>2.2.0
-    - torch-runstats ==0.2.0
+    - scikit-learn
+    - torchaudio >=2.2.0
+    - torchvision >=0.17.0
+    - torch-runstats >=0.2.0
     - torchmetrics >=0.10.0
-    - torch-ema ==0.3
+    - torch-ema >=0.3
+    - wandb
 
 test:
   imports:
