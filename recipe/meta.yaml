@@ -45,8 +45,8 @@ requirements:
     - pytorch_geometric >=2.5.3
     - seekpath
     - scikit-learn
-    - torchvision >=0.17.0
     - torchaudio >=2.2.0
+    - torchvision >=0.17.0
     - torch-runstats >=0.2.0
     - torchmetrics >=0.10.0
     - torch-ema >=0.3
